@@ -20,26 +20,53 @@
 
   --font-size-mobile-small: .8125rem;
   --font-size-mobile-semi-small: .875rem;
-  --font-size-mobile-normal: 1rem;
+  --font-size-mobile-regular: 1rem;
   --font-size-mobile-semi-big: 1.875rem;
   --font-size-mobile-big: 2.5rem;
 
-  --font-size-body: var(--font-size-mobile-normal);
+  --font-size-body: var(--font-size-mobile-regular);
   --font-size-navigation: var(--font-size-mobile-semi-small);
+  --font-size-primary-heading: var(var(--font-size-mobile-big));
 }
 
   @media (min-width: 50em) {
     :root {
       --font-size-small: .8125rem;
       --font-size-semi-small: .875rem;
-      --font-size-normal: 1rem;
+      --font-size-regular: 1rem;
       --font-size-semi-big: 2.5rem;
       --font-size-big: 3.5rem;
 
-      --font-size-body: var(--font-size-normal);
+      --font-size-body: var(--font-size-regular);
       --font-size-navigation: var(--font-size-semi-big);
+      --font-size-primary-heading: var(--font-size-mobile-big);
     }
 }
+
+/* utility classes */
+
+.fs-p-heading {
+  font-size: var(--font-size-primary-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.fs-p-text {
+  font-size: var(--font-size-body);
+}
+
+.fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.fw-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.fw-thin {
+  font-weight: var(--font-weight-thin);
+}
+
+
 
 
 * {
