@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Oswald:wght@200;400;600&display=swap');
 
 :root {
-  --main-dark: hsl(215, 50, 23);
-  --main-light: hsl(105, 55, 96);
-  --accent: hsl(355, 78, 56);
+  --main-dark: hsl(215, 50%, 23%);
+  --main-light: hsl(105, 55%, 96%);
+  --accent: hsl(355, 78%, 56%);
 
-  --blue-dark: hsl(203, 39, 44);
-  --blue-light: hsl(182, 43, 76);
+  --blue-dark: hsl(203, 39%, 44%);
+  --blue-light: hsl(182, 43%, 76%);
 
-  --font-primary: 'Montserrat', sans-serif;
-  --font_secondary: 'Oswald', sans-serif;
+  --color-light: var(--main-light);
+  --color-dark: var(--main-dark);
 
-  --font-body: var(--font-primary);
-  --font-heading: var(--font_secondary);
+  --font-family-primary: 'Montserrat', sans-serif;
+  --font-family-secondary: 'Oswald', sans-serif;
+
+  --font-family-paragraph: var(--font-family-primary);
+  --font-family-heading: var(--font-family-secondary);
 
   --font-weight-thin: 200;
   --font-weight-regular: 400;
@@ -21,12 +24,14 @@
   --font-size-mobile-small: .8125rem;
   --font-size-mobile-semi-small: .875rem;
   --font-size-mobile-regular: 1rem;
-  --font-size-mobile-semi-big: 1.875rem;
+  --font-size-mobile-semi-big: 2.2rem;
   --font-size-mobile-big: 2.5rem;
 
   --font-size-body: var(--font-size-mobile-regular);
   --font-size-navigation: var(--font-size-mobile-semi-small);
-  --font-size-primary-heading: var(var(--font-size-mobile-big));
+  --font-size-primary-heading: var(--font-size-mobile-big);
+  --font-size-secondary-heading: var(--font-size-mobile-semi-big);
+
 }
 
   @media (min-width: 50em) {
@@ -34,12 +39,14 @@
       --font-size-small: .8125rem;
       --font-size-semi-small: .875rem;
       --font-size-regular: 1rem;
-      --font-size-semi-big: 2.5rem;
+      --font-size-semi-big: 3rem;
       --font-size-big: 3.5rem;
 
       --font-size-body: var(--font-size-regular);
       --font-size-navigation: var(--font-size-semi-big);
       --font-size-primary-heading: var(--font-size-mobile-big);
+      --font-size-secondary-heading: var(--font-size-semi-big);
+
     }
 }
 
@@ -47,10 +54,13 @@
 
 .fs-p-heading {
   font-size: var(--font-size-primary-heading);
-  font-weight: var(--font-weight-bold);
 }
 
-.fs-p-text {
+.fs-s-heading {
+  font-size: var(--font-size-secondary-heading);
+}
+
+.fs-p-paragraph {
   font-size: var(--font-size-body);
 }
 
@@ -66,8 +76,25 @@
   font-weight: var(--font-weight-thin);
 }
 
+.bg-accent {
+  background-color: var(--accent);
+}
 
+.bg-dark {
+  background-color: var(--color-dark);
+}
 
+.bg-light {
+  background-color: var(--main-light);
+}
+
+.f-color-light {
+  color: var(--main-light);
+}
+
+.f-color-dark {
+  color: var(--main-dark);
+}
 
 * {
   box-sizing: border-box;
@@ -82,6 +109,18 @@ body {
   padding: 0;
   line-height: 1.5em;
   font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-heading);
+}
+
+p {
+  font-family: var(--font-family-paragraph);
 }
 
 html,
