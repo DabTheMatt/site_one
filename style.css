@@ -96,6 +96,14 @@
   color: var(--main-dark);
 }
 
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -156,4 +164,5 @@ ol {
 body {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
+  color: var(--main-dark);
 }
