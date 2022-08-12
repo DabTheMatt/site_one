@@ -150,3 +150,10 @@ ul,
 ol {
   list-style: none;
 }
+
+/* General styling */
+
+body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+}
