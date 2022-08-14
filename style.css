@@ -5,6 +5,9 @@
   --main-light: hsl(105, 55%, 96%);
   --accent: hsl(355, 78%, 56%);
 
+  --accent-opacity-5: hsl(355, 78%, 70%);
+
+
   --blue-dark: hsl(203, 39%, 44%);
   --blue-light: hsl(182, 43%, 76%);
 
@@ -42,6 +45,7 @@
   --font-size-navigation: var(--font-size-mobile-semi-small);
   --font-size-primary-heading: var(--font-size-mobile-big);
   --font-size-secondary-heading: var(--font-size-mobile-semi-big);
+  --font-size-primary-button: var(--font-size-mobile-regular);
 
 }
 
@@ -57,7 +61,7 @@
       --font-size-navigation: var(--font-size-semi-big);
       --font-size-primary-heading: var(--font-size-big);
       --font-size-secondary-heading: var(--font-size-semi-big);
-
+      --font-size-primary-button: var(--font-size-regular);
     }
 }
 
@@ -65,10 +69,12 @@
 
 .fs-p-heading {
   font-size: var(--font-size-primary-heading);
+  line-height: 1.1;
 }
 
 .fs-s-heading {
   font-size: var(--font-size-secondary-heading);
+  line-height: 1.1;
 }
 
 .fs-p-paragraph {
@@ -215,4 +221,24 @@ body {
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-heading);
   line-height: var(--size-5);
+}
+
+/* button */
+
+.regular-button {
+  border: 0;
+  border-radius: 100vmax;
+  padding: 1em 2.5em;
+  font-size: var(--font-size-primary-button);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-light);
+  background-color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1.25em 1em -1em var(--accent-opacity-5);
+}
+
+.regular-button:hover,
+.regular-button:focus-visible {
+  background-color: var(--accent-opacity-5);
 }
